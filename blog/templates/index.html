@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock %}
+
+
+{% block content %}
+  {% for article in articles %}
+    <article class="post">
+      <header>
+        <div>
+          <h1>{{ article.title }}</h1>
+          <div class="about"> {{ article.created }}</div>
+        </div>
+      </header>
+      <p class="body">{{ article.body }}</p>
+    </article>
+      <hr/>
+  {% endfor %}
+{% endblock %}
